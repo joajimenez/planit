@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AIDO: The AI Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5bea8a1774.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>AIDO</h1>
+      <small>The AI Todo App.</small>
+    </nav>
+    <div id="app">
+      <div class="content-container">
+        <form id="create-task-form">
+          <h3>Create Task</h3>
+          <label for="todo-title-input" id="todo-title-input-label"
+            >Task Title</label
+          >
+          <input
+            type="text"
+            name="todo-title-input"
+            placeholder="Enter task title"
+            id="todo-title-input"
+          />
+
+          <label for="todo-description-input" id="todo-description-input-label">
+            Description
+          </label>
+          <textarea
+            name="todo-description-input"
+            id="todo-description-input"
+            placeholder="Enter task description"
+          ></textarea>
+
+          <label for="todo-date-input" id="todo-date-input-label"
+            >Due Date</label
+          >
+          <input type="date" name="todo-date-input" id="todo-date-input" />
+
+          <label for="todo-priority-input" id="todo-priority-input-label"
+            >Priority</label
+          >
+          <select name="todo-priority-input" id="todo-priority-input">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <input
+            type="button"
+            value="+   CREATE TASK"
+            id="create-task-button"
+          />
+        </form>
+
+        <section>
+          <div class="cards-container-el">
+            <div class="card">
+              <header class="card-header">
+                <h4 class="card-header-title">Learn React</h4>
+                <span id="priority-display-el">High</span>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Recusandae veniam, culpa dolorem aliquid quibusdam similique
+                    repellat amet laudantium. Perferendis illo praesentium natus
+                    enim accusantium id.
+                  </p>
+                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                </div>
+                <br />
+              </div>
+              <footer class="card-footer">
+                <button href="#" class="card-footer-item complete-task-button">
+                  Complete
+                </button>
+                <button href="#" class="card-footer-item delete-task-button">
+                  Delete
+                </button>
+              </footer>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="main.js" defer type="module"></script>
+  </body>
+</html>
