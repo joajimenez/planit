@@ -47,6 +47,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
+  align-items: baseline;
 
   will-change: transform;
   transform: translateZ(0);
@@ -54,7 +55,7 @@ nav {
   height: 50px;
 
   box-shadow: 0 -2px 5px -2px #333;
-  /* background-color: #fff; */
+  background-color: #0c151c;
 }
 
 .bottom-nav-icons-container {

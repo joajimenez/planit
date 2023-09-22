@@ -6,6 +6,7 @@ import {
   generateShortUUID,
 } from "./utils/utils.js";
 import { createTodoCard } from "./components/ui_components.js";
+import { createNavbar } from "./components/navbar.js";
 
 let todosArr = [
   new CreateTodoItem(
@@ -76,6 +77,9 @@ createTaskButton.addEventListener("click", () => {
 
 function main() {
   insertTodosToDom(todosArr);
+  const nav = createNavbar();
+  const app = document.querySelector("#app");
+  app.prepend(nav);
 }
 
 main();
