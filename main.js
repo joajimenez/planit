@@ -79,7 +79,7 @@ function main() {
   insertTodosToDom(todosArr);
   const nav = createNavbar();
   const app = document.querySelector("#app");
-  app.prepend(nav);
+  app.append(nav);
 }
 
 main();

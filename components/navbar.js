@@ -2,10 +2,26 @@ export const createNavbar = () => {
     const nav = document.createElement('nav');
     nav.classList.add('navbar');
 
-    const h1 = document.createElement('h1');
-    h1.classList.add('title');
-    h1.textContent = 'Todo App';
+    const navContent = `<div class="bottom-nav-icons-container">
+          <i class="ti ti-home-2"></i>
+          <p>Home</p>
+        </div>
 
-    nav.appendChild(h1);
+        <div class="bottom-nav-icons-container">
+          <i class="ti ti-layout-kanban"></i>
+          <p>Projects</p>
+        </div>
+
+        <div class="bottom-nav-icons-container">
+          <i class="ti ti-list-check"></i>
+          <p>Tasks</p>
+        </div>
+
+        <div class="bottom-nav-icons-container">
+          <i class="ti ti-user-circle"></i>
+          <p>Profile</p>
+        </div>`
+
+    nav.innerHTML = navContent;
     return nav;
 }
