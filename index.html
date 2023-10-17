@@ -7,142 +7,178 @@
   <title>Planit: The Project Management Tool App</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <nav>
-    <h1>Planit</h1>
-    <button>Login</button>
-  </nav>
-  <div id="app">
-    <div class="content-container">
-      <section id="hero">
-        <h3>Powering your team's success</h3>
-        <p>Planit is the AI project manager that helps you stay on track, collaborate with your team, and deliver
-          projects on
-          time and on budget. With Planit, you can:</p>
-        <ul>
-          <li>Easily manage all your projects in one place.</li>
-          <li>Collaborate with your team seamlessly.</li>
-          <li>Automate repetitive tasks.</li>
-          <li>Get insights from AI.</li>
-        </ul>
-        <p>Planit is the perfect project management tool for teams of all sizes. Whether you're working on a small
-          startup
-          project or a large enterprise initiative, Planit can help you succeed.</p>
-        <button href="/signup" class="btn btn-primary">Create a project</button>
-      </section>
+  <header class="container">
+    <nav>
+      <ul>
+        <li id="logo">Planit</li>
+      </ul>
+      <ul>
+        <!-- <li><a href="#">Link</a></li> -->
+        <!-- <li><a href="#">Login</a></li> -->
+        <!-- <li><a href="#" role="button">Go to App <i class="ti ti-square-rounded-arrow-right-filled"></i>
+          </a></li> -->
+        <li><a href="#" role="button" id="create-task-button">Add task <i class="ti ti-list"></i>
+          </a></li>
+        <li><a href="#" role="button" class="secondary" id="create-project-button">Create a project <i
+              class="ti ti-layout-kanban"></i>
+          </a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="app container">
+    <!-- <section class="hero">
+      <div class="hero-content">
+        <h2>The AI Todo List</h2>
+        <p>Planit is a project management tool that helps you organize your projects and tasks.</p>
+        <a href="#" role="button" class="contrast">Start a project</a>
+      </div>
+      <div class="hero-image">
+        <img src="./assets/marten-bjork-rH8O0FHFpfw-unsplash.jpg" alt="Hero Image" />
+      </div>
+    </section> -->
 
-      <!-- Form for creating a task -->
-      <form id="create-task-form">
-        <h3>Create Task</h3>
-        <label for="todo-title-input" id="todo-title-input-label">Task Title</label>
-        <input type="text" name="todo-title-input" placeholder="Enter task title" id="todo-title-input" />
+    <section class="left-sidebar">
+      <div class="sidebar">
+        <div class="sidebar-header">
 
-        <label for="todo-description-input" id="todo-description-input-label">
-          Description
-        </label>
-        <textarea name="todo-description-input" id="todo-description-input"
-          placeholder="Enter task description"></textarea>
-
-        <label for="todo-date-input" id="todo-date-input-label">Due Date</label>
-        <input type="date" name="todo-date-input" id="todo-date-input" />
-
-        <label for="todo-priority-input" id="todo-priority-input-label">Priority</label>
-        <select name="todo-priority-input" id="todo-priority-input">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-
-        <input type="button" value="+   CREATE TASK" id="create-task-button" />
-      </form>
-
-      <!-- Cards container element -->
-      <section>
-        <div class="cards-container-el">
-          <div class="card">
-            <header class="card-header">
-              <h4 class="card-header-title">Learn React</h4>
-              <span id="priority-display-el">High</span>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Recusandae veniam, culpa dolorem aliquid quibusdam similique
-                  repellat amet laudantium. Perferendis illo praesentium natus
-                  enim accusantium id.
-                </p>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-              <br />
-            </div>
-            <footer class="card-footer">
-              <button href="#" class="card-footer-item complete-task-button">
-                Complete
-              </button>
-              <button href="#" class="card-footer-item delete-task-button">
-                Delete
-              </button>
-            </footer>
-          </div>
         </div>
-      </section>
-
-
-      <div class="projects-container-el">
-        <div class="project-card">
-          <header class="project-card-header">
-            <h4 class="project-card-header-title">Project 1</h4>
-          </header>
-          <div class="project-card-content">
-            <div class="project-content">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Recusandae veniam, culpa dolorem aliquid quibusdam similique
-                repellat amet laudantium. Perferendis illo praesentium natus
-                enim accusantium id.
-              </p>
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-
-            </div>
-            <br />
-          </div>
-          <footer class="project-card-footer">
-            <button href="#" class="project-card-footer-item complete-project-button">
-              View
-            </button>
-            <button href="#" class="project-card-footer-item delete-project-button">
-              Delete
-            </button>
-          </footer>
+        <div class="sidebar-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">Profile</a></li>
+          </ul>
         </div>
       </div>
-      <nav class="bottom-navbar">
-        <div class="bottom-nav-icons-container">
-          <i class="ti ti-home-2"></i>
-          <p>Home</p>
+      <hr>
+      <div class="projects">
+        <div class="projects-menu">
+          <h3>Projects</h3>
+          <ul>
+            <li><a href="#">Project 1</a></li>
+            <li><a href="#">Project 2</a></li>
+            <li><a href="#">Project 3</a></li>
+            <li><a href="#">Project 4</a></li>
+          </ul>
         </div>
+      </div>
+    </section>
+    <main class="main-content">Main content</main>
+  </div>
 
-        <div class="bottom-nav-icons-container">
-          <i class="ti ti-layout-kanban"></i>
-          <p>Projects</p>
-        </div>
 
-        <div class="bottom-nav-icons-container">
-          <i class="ti ti-list-check"></i>
-          <p>Tasks</p>
-        </div>
+  <!-- Form for creating a task -->
+  <!-- <form id="create-task-form">
+    <h3>Create Task</h3>
+    <label for="todo-title-input" id="todo-title-input-label">Task Title</label>
+    <input type="text" name="todo-title-input" placeholder="Enter task title" id="todo-title-input" />
 
-        <div class="bottom-nav-icons-container">
-          <i class="ti ti-user-circle"></i>
-          <p>Profile</p>
+    <label for="todo-description-input" id="todo-description-input-label">
+      Description
+    </label>
+    <textarea name="todo-description-input" id="todo-description-input" placeholder="Enter task description"></textarea>
+
+    <label for="todo-date-input" id="todo-date-input-label">Due Date</label>
+    <input type="date" name="todo-date-input" id="todo-date-input" />
+
+    <label for="todo-priority-input" id="todo-priority-input-label">Priority</label>
+    <select name="todo-priority-input" id="todo-priority-input">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <input type="button" value="+   CREATE TASK" id="create-task-button" />
+  </form> -->
+
+  <!-- Cards container element -->
+  <!-- <section>
+    <div class="cards-container-el">
+      <div class="card">
+        <header class="card-header">
+          <h4 class="card-header-title">Learn React</h4>
+          <span id="priority-display-el">High</span>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Recusandae veniam, culpa dolorem aliquid quibusdam similique
+              repellat amet laudantium. Perferendis illo praesentium natus
+              enim accusantium id.
+            </p>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </div>
+          <br />
         </div>
-      </nav>
+        <footer class="card-footer">
+          <button href="#" class="card-footer-item complete-task-button">
+            Complete
+          </button>
+          <button href="#" class="card-footer-item delete-task-button">
+            Delete
+          </button>
+        </footer>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- <div class="projects-container-el">
+    <div class="project-card">
+      <header class="project-card-header">
+        <h4 class="project-card-header-title">Project 1</h4>
+      </header>
+      <div class="project-card-content">
+        <div class="project-content">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Recusandae veniam, culpa dolorem aliquid quibusdam similique
+            repellat amet laudantium. Perferendis illo praesentium natus
+            enim accusantium id.
+          </p>
+          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+
+        </div>
+        <br />
+      </div>
+      <footer class="project-card-footer">
+        <button href="#" class="project-card-footer-item complete-project-button">
+          View
+        </button>
+        <button href="#" class="project-card-footer-item delete-project-button">
+          Delete
+        </button>
+      </footer>
     </div>
   </div>
+  <nav class="bottom-navbar">
+    <div class="bottom-nav-icons-container">
+      <i class="ti ti-home-2"></i>
+      <p>Home</p>
+    </div>
+
+    <div class="bottom-nav-icons-container">
+      <i class="ti ti-layout-kanban"></i>
+      <p>Projects</p>
+    </div>
+
+    <div class="bottom-nav-icons-container">
+      <i class="ti ti-list-check"></i>
+      <p>Tasks</p>
+    </div>
+
+    <div class="bottom-nav-icons-container">
+      <i class="ti ti-user-circle"></i>
+      <p>Profile</p>
+    </div>
+  </nav>
+  </div>
+  </div> -->
   <script src="main.js" defer type="module"></script>
 </body>
 

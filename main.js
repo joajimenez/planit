@@ -38,6 +38,7 @@ let todosArr = [
 ];
 
 const createTaskButton = document.querySelector("#create-task-button");
+console.log(createTaskButton)
 
 createTaskButton.addEventListener("click", () => {
   const newTaskTitle = document.querySelector("#todo-title-input").value;
@@ -66,14 +67,6 @@ createTaskButton.addEventListener("click", () => {
   insertTodosToDom(todosArr);
 });
 
-// const deleteTaskButton = document.querySelector(".delete-task-button");
-// deleteTaskButton.addEventListener("click", () => {
-//   const deleteTask = document.querySelector(".delete-task-input").value;
-
-//   todosArr = todosArr.filter((todo) => todo.task !== deleteTask);
-
-//   document.querySelector(".cards-container-el").innerHTML += todoCard;
-// });
 
 function main() {
   insertTodosToDom(todosArr);
